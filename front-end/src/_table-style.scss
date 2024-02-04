@@ -1,0 +1,75 @@
+$head: #4444;
+$head-font: #f58544;
+$body-font: lighten($head-font, 20%);
+$delete-button: #fa0643;
+$background: #18181b;
+
+table {
+    border: none;
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+}
+
+thead {
+    background-color: $head;
+    color: $head-font;
+}
+
+th {
+    padding: 5px;
+    height: 40px;
+    &:nth-child(1) {
+        width: 60%;
+        padding-left: 15px;
+        text-align: left;
+    }
+    &:nth-child(2) {
+        text-align: center;
+    }
+    &:nth-child(3) {
+        text-align: center;
+    }
+    &:nth-child(4) {
+        text-align: center;
+    }
+}
+
+td {
+    border: 1px solid $background;
+    &:nth-child(1) {
+        padding-left: 15px;
+        text-align: left;
+    }
+    &:nth-child(2) {
+        text-align: center;
+    }
+    &:nth-child(3) {
+        text-align: center;
+    }
+    &:nth-child(4) {
+        text-align: center;
+    }
+}
+
+
+tbody {
+    color: $body-font;
+    background-color: lighten($head, 10%);
+}
+
+tr {
+    height: 30px;
+    &:nth-child(odd) {
+        background-color: lighten($head, 10%);
+    }
+}
+
+tr:hover {
+    background-color: lighten($head, 30%);
+}
+
+.item_delete {
+    color: $delete-button;
+    border: none;
+}

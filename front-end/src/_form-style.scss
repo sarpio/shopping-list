@@ -1,0 +1,58 @@
+$head: #4444;
+$head-font: #f58544;
+$body-font: lighten($head-font, 20%);
+$delete-button: #7e0542;
+$background: #18181b;
+
+h1 {
+    color: $head-font;
+    margin: 1px 5px;
+}
+
+label {
+    color: lighten($head-font, 30%);
+    height: 25px;
+    margin: 1px 5px;
+}
+
+input {
+    border: 1px solid $body-font;
+    height: 25px;
+    margin: 1px 5px;
+}
+
+select {
+    border: 1px solid $body-font;
+    height: 29px;
+    margin: 1px 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.save {
+    border: none;
+    background-color: $delete-button;
+    width: 120px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    margin: 10px 5px;
+    &:disabled{
+        background-color: lighten($head, 40%);
+    }
+}

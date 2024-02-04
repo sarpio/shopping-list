@@ -1,0 +1,24 @@
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col product">
+        <label for="product">Nazwa produktu</label>
+        <input id="product" type="text" formControlName="product">
+      </div>
+      <div class="col quantity">
+        <label for="quantity">Ilość</label>
+        <input id="quantity" type="number" formControlName="quantity">
+      </div>
+      <div class="col units">
+        <label for="units">J.m.</label>
+        <select id="units" formControlName="units">
+          <option value="" selected hidden>--</option>
+          <option *ngFor="let unit of units" [ngValue]="unit">{{unit}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <button class="save" [disabled]="!myForm.valid">Zapisz</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<div class="container" style="padding-bottom: 20px;">
+  <h1>{{title}}</h1>
+  <app-add-item></app-add-item>
+</div>
+<div class="container">
+  <table>
+      <thead class="table_head">
+          <th class="table_head_item">Produkt</th>
+          <th class="table_head_item">Ilość</th>
+          <th class="table_head_item">J.m.</th>
+          <th class="table_head_item">Usuń</th>
+      </thead>
+      <tbody class="table_body">
+          <tr class="table_row" *ngFor="let item of shoppingList">
+              <td class="table_item">{{item.product}}</td>
+              <td class="table_item">{{item.quantity}}</td>
+              <td class="table_item">{{item.units}}</td>
+              <td class="table_item" (click)="deleteShoppingItem(item.id)">
+                  <a class="item_delete">
+                      <fa-icon [icon]="faDelete" size="lg"></fa-icon>
+                  </a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

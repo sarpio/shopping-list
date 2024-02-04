@@ -1,0 +1,18 @@
+@charset "UTF-8";
+$table-head-bg: aqua;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import 'table-style';
+@import 'form-style';
+$background: #18181b;
+
+*,
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: $background;
+}
+
